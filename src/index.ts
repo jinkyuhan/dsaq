@@ -29,10 +29,15 @@ async function main(args: string[]) {
   assertEnv();
   assertTmux();
 
-  const { _, q } = minimist(args.slice(2), { boolean: ["q"] });
+  const { _, q, s } = minimist(args.slice(2), { boolean: ["q", "s"] });
 
   const model = new ChatOpenAI({ model: DSAQ_OPENAI_MODEL, temperature: 0 });
   const context = getContext();
+
+  if (s) {
+    console.log(context);
+    return;
+  }
 
   const question = _.join(" ");
   if (q) {

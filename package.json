@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "build": "tsc --outDir dist"
+    "build": "esbuild src/index.ts --bundle --platform=node --outfile=dist/index.js --tsconfig=tsconfig.json"
   },
   "bin": {
     "dsaq": "./dist/index.js"
@@ -11,6 +11,7 @@
   "devDependencies": {
     "@types/minimist": "^1.2.5",
     "@types/node": "^22.10.0",
+    "esbuild": "^0.24.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
