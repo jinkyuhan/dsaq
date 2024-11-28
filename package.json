@@ -1,12 +1,12 @@
 {
-  "name": "shellm",
+  "name": "dsaq",
   "version": "0.0.1",
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsc --outDir dist"
   },
   "bin": {
-    "shellm": "./dist/index.js"
+    "dsaq": "./dist/index.js"
   },
   "devDependencies": {
     "@types/minimist": "^1.2.5",

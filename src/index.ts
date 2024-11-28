@@ -16,7 +16,7 @@ import { Runnable } from "@langchain/core/runnables";
 import { BaseChatModel } from "@langchain/core/language_models/chat_models";
 import { execSync, spawn } from "child_process";
 
-const SHELLM_OPENAI_MODEL = process.env.SHELLM_OPENAI_MODEL || "gpt-4o-mini";
+const DSAQ_OPENAI_MODEL = process.env.DSAQ_OPENAI_MODEL || "gpt-4o-mini";
 const AnswerSchema = z.object({
   recommendCommand: z.string(),
 });
@@ -31,7 +31,7 @@ async function main(args: string[]) {
 
   const { _, q } = minimist(args.slice(2), { boolean: ["q"] });
 
-  const model = new ChatOpenAI({ model: SHELLM_OPENAI_MODEL, temperature: 0 });
+  const model = new ChatOpenAI({ model: DSAQ_OPENAI_MODEL, temperature: 0 });
   const context = getContext();
 
   const question = _.join(" ");
