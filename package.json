@@ -1,0 +1,24 @@
+{
+  "name": "shellm",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "ts-node src/index.ts",
+    "build": "tsc --outDir dist"
+  },
+  "bin": {
+    "shellm": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/minimist": "^1.2.5",
+    "@types/node": "^22.10.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@langchain/core": "^0.3.19",
+    "@langchain/openai": "^0.3.14",
+    "langchain": "^0.3.6",
+    "minimist": "^1.2.8",
+    "zod": "^3.23.8"
+  }
+}
